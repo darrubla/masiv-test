@@ -32,7 +32,6 @@ const card = () => {
           setState({
             error,
             isLoaded: true,
-            data: [],
           });
         }
       );

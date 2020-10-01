@@ -18,7 +18,7 @@ const card = () => {
       url: url,
     })
       .then((res) => {
-        res.json(), console.log(res);
+        console.log(res);
       })
       .then(
         (result) => {
@@ -37,7 +37,7 @@ const card = () => {
         }
       );
   }, []);
-  console.log(state);
+  console.log(state.data);
 
   if (state.error) {
     return <h1>Oops, data no disponible</h1>;

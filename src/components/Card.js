@@ -18,7 +18,7 @@ const card = () => {
     // });
 
     axios({
-      method: "get",
+      method: "GET",
       url: url,
     }).then((res) => {
       console.log(res.data, url);

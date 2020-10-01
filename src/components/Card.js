@@ -47,9 +47,9 @@ const card = () => {
     return (
       <div className="card-container">
         <article>
-          <h2>{state.data.title}</h2>
+          <h2>{state.data.data.title}</h2>
           <figure>
-            <img src={state.data.img} alt="" />
+            <img src={state.data.data.img} alt="" />
           </figure>
           <div>
             <input type="checkbox" />

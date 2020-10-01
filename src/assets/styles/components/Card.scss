@@ -1,0 +1,32 @@
+@import "../Vars.scss";
+
+.card-container {
+  height: 30vh;
+  width: 20vw;
+  display: grid;
+  place-items: center;
+  article {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 15% 60% 25%;
+    justify-content: center;
+    border: 1px solid black;
+    & > * {
+      margin: 0;
+    }
+    h2 {
+      width: 90%;
+    }
+    figure {
+      height: 70%;
+      width: 90%;
+    }
+    div {
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border: 1px solid black;
+    }
+  }
+}

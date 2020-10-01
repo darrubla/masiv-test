@@ -13,46 +13,43 @@ const card = () => {
   useEffect(() => {
     const url = Api();
     console.log(url);
-    // axios.get(url).then((res) => {
-    //   console.log(res.data);
-    // });
-
     axios({
       method: "GET",
       url: url,
-    }).then((res) => {
-      console.log(res.data, url);
-    });
-    // .then((res) => res.json())
-    // .then(
-    //   (result) => {
-    //     setState({
-    //       error: null,
-    //       isLoaded: true,
-    //       data: result,
-    //     });
-    //   },
-    //   (error) => {
-    //     setState({
-    //       error,
-    //       isLoaded: true,
-    //       data: [],
-    //     });
-    //   }
-    // );
+    })
+      .then((res) => {
+        res.json(), console.log(res);
+      })
+      .then(
+        (result) => {
+          setState({
+            error: null,
+            isLoaded: true,
+            data: result,
+          });
+        },
+        (error) => {
+          setState({
+            error,
+            isLoaded: true,
+            data: [],
+          });
+        }
+      );
   }, []);
+  console.log(state);
 
   if (state.error) {
     return <h1>Oops, data no disponible</h1>;
-  } else if (state.isLoaded) {
+  } else if (!state.isLoaded) {
     return <h1>Loading...</h1>;
   } else {
     return (
       <div className="card-container">
         <article>
-          <h2>hola</h2>
+          <h2>{state.data.title}</h2>
           <figure>
-            <img src="" alt="" />
+            <img src={state.data.img} alt="" />
           </figure>
           <div>
             <input type="checkbox" />

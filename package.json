@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/darrubla/masiv-test/issues"
   },
-  "homepage": "https://github.com/darrubla/masiv-test",
+  "homepage": "https://github.com/darrubla/masiv-test/dist",
   "dependencies": {
     "axios": "^0.20.0",
     "babel-eslint": "^10.1.0",

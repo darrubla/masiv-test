@@ -44,7 +44,7 @@ const card = () => {
 
   if (state.error) {
     return <h1>Oops, data no disponible</h1>;
-  } else if (!state.isLoaded) {
+  } else if (state.isLoaded) {
     return <h1>Loading...</h1>;
   } else {
     return (

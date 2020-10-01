@@ -3,15 +3,18 @@
 .card-container {
   height: 30vh;
   width: 20vw;
-  display: grid;
-  place-items: center;
+  display: flex;
+  float: left;
   article {
     height: 100%;
     width: 100%;
     display: grid;
+    @include card-bg;
     grid-template-rows: 15% 60% 25%;
-    justify-content: center;
+    text-align: center;
+    justify-items: center;
     border: 1px solid black;
+    border-radius: $corners;
     & > * {
       margin: 0;
     }
@@ -19,14 +22,13 @@
       width: 90%;
     }
     figure {
-      height: 70%;
       width: 90%;
     }
     div {
       width: 90%;
       display: grid;
+      place-items: center;
       grid-template-columns: repeat(5, 1fr);
-      border: 1px solid black;
     }
   }
 }

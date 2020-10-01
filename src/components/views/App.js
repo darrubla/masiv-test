@@ -1,11 +1,19 @@
 import React from "react";
 import Card from "../Card";
+import "../../assets/styles/components/App.scss";
 
 const App = () => {
   return (
-    <React.Fragment>
+    <div className="container">
       <Card></Card>
-    </React.Fragment>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+    </div>
   );
 };
 
